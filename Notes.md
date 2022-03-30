@@ -61,3 +61,6 @@ The simplest way to understand these objects is an array-like structure...that a
 - `s.lower()` Return a copy of the string with all the cased characters converted to lowercase.
 - `s.upper()` Return a copy of the string with all the cased characters converted to uppercase.
 - `s.capitalize()` Return a copy of the string with its first character capitalized and the rest lowercased.
+
+## Linked Lists
+A singly linked list is a data structure that contains a sequence of nodes such that each node contains an object and a reference to the next node in the list. The first node is referred to as the head and the last node is referred to as the tail; the tail’s next field is null.
