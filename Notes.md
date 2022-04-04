@@ -63,4 +63,13 @@ The simplest way to understand these objects is an array-like structure...that a
 - `s.capitalize()` Return a copy of the string with its first character capitalized and the rest lowercased.
 
 ## Linked Lists
-A singly linked list is a data structure that contains a sequence of nodes such that each node contains an object and a reference to the next node in the list. The first node is referred to as the head and the last node is referred to as the tail; the tail’s next field is null.
+A singly linked list is a data structure that contains a sequence of nodes such that each node contains an object and a reference to the next node in the list. The first node is referred to as the head and the last node is referred to as the tail; the tail’s next field is null. The link list has no estrict linear ordering memory, the ordering of the elements is control by the data structure.
+
+To see the `Class` implementation review the `linked_list.py` file.
+
+## Stacks and Queues
+Stacks support last-in, first-out semantics for inserts and deletes whereas queues are first-in, first-out.
+
+Stack operations:
+- Push: Add an element.
+- Pop: Remove an element.
