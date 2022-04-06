@@ -73,3 +73,21 @@ Stacks support last-in, first-out semantics for inserts and deletes whereas queu
 Stack operations:
 - Push: Add an element.
 - Pop: Remove an element.
+
+See `stacks_queues.py` file to see their implementations.
+
+## Binary Trees
+The *binary tree* helps to deal with hierarchies.
+A binary tree is either empty, or a root node r together with a left binary tree and a right
+binary tree. The subtrees themselves are binary trees. The left binary tree is sometimes referred to
+as the left subtree of the root, and the right binary tree is referred to as the right subtree of the root.
+
+### Definitions:
+- Each node, except the root, is itself the root of a left subtree or a right subtree. 
+- If l is the root of p’s left subtree, we will say l is the left child of p, and p is the parent of l.
+- If a node is a left or a right child of p, we say it is a child of p. 
+- **search path**: For any node there exists a unique sequence of nodes from the root to that node with each node in the sequence being a child of the previous node.
+- The **depth** of a node n is the number of nodes on the search path from the root to n, not including
+n itself.
+- The **height** of a binary tree is the maximum depth of any node in that tree. 
+- A **level** of a tree is all nodes at the same depth.
