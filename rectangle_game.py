@@ -44,32 +44,37 @@ class GuiRectangle(Rectangle):
         canvas.forward(self.point2.x - self.point1.x)
         canvas.left(90)
         canvas.forward(self.point2.y - self.point1.y)
-        
-        turtle.done() # Keep the Graphics interface
+
+# Subclass of Point class.
+class GuiPoint(Point):
+    def draw(self, canvas, size=5, color='red'):
+        canvas.penup()
+        canvas.goto(self.x, self.y)
+        canvas.penup()
+        canvas.dot(size, color)
 
 
-gui_rectangle = GuiRectangle(Point(randint(0, 400), randint(0, 400)),
-               Point(randint(10, 400), randint(10, 400)))
+# Create rectangle object
+rectangle = GuiRectangle(Point(randint(0, 400), randint(0, 400)),
+              Point(randint(10, 400), randint(10, 400)))
+
+# Print rectangle coordinates
+print("Rectangle Coordinates: ",
+      rectangle.point1.x, ",",
+      rectangle.point1.y, "and",
+      rectangle.point2.x, ",",
+      rectangle.point2.y)
+
+# Get point and area from user
+user_point = GuiPoint(float(input("Guess x: ")), float(input("Guess y: ")))
+user_area = float(input("Guess rectangle area: "))
+
+# Print out the game result
+print("Your point was inside rectangle: ", user_point.falls_in_rectangle(rectangle))
+print("Your area was off by: ", rectangle.area() - user_area)
 
 myturtle = turtle.Turtle()
 
-gui_rectangle.draw(canvas=myturtle)
-
-# # Create rectangle object
-# rectangle = Rectangle(Point(randint(0, 400), randint(0, 400)),
-#               Point(randint(10, 400), randint(10, 400)))
-
-# # Print rectangle coordinates
-# print("Rectangle Coordinates: ",
-#       rectangle.point1.x, ",",
-#       rectangle.point1.y, "and",
-#       rectangle.point2.x, ",",
-#       rectangle.point2.y)
-
-# # Get point and area from user
-# user_point = Point(float(input("Guess x: ")), float(input("Guess y: ")))
-# user_area = float(input("Guess rectangle area: "))
-
-# # Print out the game result
-# print("Your point was inside rectangle: ", user_point.falls_in_rectangle(rectangle))
-# print("Your area was off by: ", rectangle.area() - user_area)
+rectangle.draw(canvas=myturtle)
+user_point.draw(canvas=myturtle)
+turtle.done() # Keep the Graphics interface
