@@ -1,5 +1,8 @@
 # Flatmates Bill App
 
+import fpdf
+import sys
+
 class Bill:
     """ 
     Object thaat contains data about a bill, such as
@@ -35,10 +38,9 @@ class PDFReport:
         self.filename = filename
 
     def generate(self, flatmate1, flatmate2, bill):
+         
         pass
         
-
-
 bill = Bill(amount = 120, period = 'March 2020')
 john = Flatmate(name = 'John', days_in_house = 20)
 mary = Flatmate(name = 'Mary', days_in_house = 25)
